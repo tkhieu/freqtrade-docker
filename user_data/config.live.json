@@ -52,7 +52,7 @@
         "chat_id": "$TELEGRAM_CHAT_ID"
     },
     "api_server": {
-        "enabled": false,
+        "enabled": "$FREQTRADE_UI",
         "listen_ip_address": "0.0.0.0",
         "listen_port": "$PORT",
         "verbosity": "error",
