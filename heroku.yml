@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+    freqtrade: Dockerfile
 run:
-  trade: freqtrade trade --config live.json --strategy $STRATEGY --db-url $DATABASE_URL
+  freqtrade: freqtrade trade --config live.json --strategy $STRATEGY --db-url $DATABASE_URL
