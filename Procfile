@@ -1,1 +1,0 @@
-trade: freqtrade trade --config live.json --strategy $STRATEGY --db-url $DATABASE_URL
