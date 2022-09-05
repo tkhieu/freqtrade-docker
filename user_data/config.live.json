@@ -1,7 +1,7 @@
 {
     "strategy": "NostalgiaForInfinityX",
     "db_url": "sqlite:////freqtrade/user_data/db/nfix.busd.dry.sqlite",
-    "dry_run": true,
+    "dry_run": "$DRY_RUN",
     "timeframe": "5m",
     "max_open_trades": 5,
     "stake_currency": "BUSD",
@@ -48,8 +48,8 @@
     },
     "telegram": {
         "enabled": true,
-        "token": "$TELEGRAM_TOKEN_LIVE",
-        "chat_id": "$TELEGRAM_CHAT_ID_LIVE"
+        "token": "$TELEGRAM_TOKEN",
+        "chat_id": "$TELEGRAM_CHAT_ID"
     },
     "api_server": {
         "enabled": false,
