@@ -2,7 +2,7 @@
 version: '3'
 services:
   live:
-    image: joaoraf/freqtrade:master
+    build: .
     env_file: 
       - .env
     restart: unless-stopped
@@ -10,3 +10,6 @@ services:
       - "./db:/freqtrade/user_data/db"
     command: >
       freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-busd.json
+    ports:
+      - "9999:9999"
+    restart: always
