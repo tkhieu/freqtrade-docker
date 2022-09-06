@@ -10,6 +10,28 @@ services:
       - "./db:/freqtrade/user_data/db"
     command: >
       freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-busd.json
+    networks:
+      - pri_freq
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
     ports:
-      - "9999:9999"
-    restart: always
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/data:/data # Optional
+      - ./caddy/config:/config # Optional
+    networks:
+      - pub_web
+      - pri_freq
+    environment:
+      - SITE_ADDRESS=${SITE_ADDRESS}
+
+networks:
+  pub_web:
+    external: true
+  pri_freq:
+    external: false
+    driver: bridge
