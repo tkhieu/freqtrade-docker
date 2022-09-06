@@ -21,7 +21,7 @@
         "use_order_book": false
     },
     "exchange": {
-        "name": "binance",
+        "name": "$EXCHANGE",
         "key": "$EXCHANGE_KEY",
         "secret": "$EXCHANGE_SECRET",
         "ccxt_config": {"enableRateLimit": true},
@@ -58,7 +58,7 @@
         "verbosity": "error",
         "enable_openapi": false,
         "jwt_secret_key": "$SECURE_KEY",
-        "CORS_origins": ["https://$HEROKU_APP_NAME.herokuapp.com"],
+        "CORS_origins": ["$CQRS"],
         "username": "$USERNAME",
         "password": "$PASSWORD"
     },
