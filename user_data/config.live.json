@@ -1,6 +1,6 @@
 {
     "strategy": "NostalgiaForInfinityX",
-    "db_url": "sqlite:////freqtrade/user_data/db/hieutk.$TRADE_FIAT.dry.sqlite",
+    "db_url": "sqlite:////freqtrade/user_data/db/hieutk.$TRADE_FIAT.isdry.$DRY_RUN.sqlite",
     "dry_run": $DRY_RUN,
     "timeframe": "5m",
     "max_open_trades": 5,
