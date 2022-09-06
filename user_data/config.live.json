@@ -1,10 +1,10 @@
 {
     "strategy": "NostalgiaForInfinityX",
-    "db_url": "sqlite:////freqtrade/user_data/db/hieutk.busd.dry.sqlite",
+    "db_url": "sqlite:////freqtrade/user_data/db/hieutk.$TRADE_FIAT.dry.sqlite",
     "dry_run": $DRY_RUN,
     "timeframe": "5m",
     "max_open_trades": 5,
-    "stake_currency": "BUSD",
+    "stake_currency": "$TRADE_FIAT",
     "stake_amount": "unlimited",
     "tradable_balance_ratio": 0.9,
     "fiat_display_currency": "USD",
