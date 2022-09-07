@@ -9,7 +9,7 @@ services:
     volumes:
       - "./db:/freqtrade/user_data/db"
     command: >
-      freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-${TRADE_FIAT}.json
+      freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-${EXCHANGE}-${TRADE_FIAT}.json
     networks:
       - pri_freq
 
