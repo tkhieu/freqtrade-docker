@@ -1,11 +1,11 @@
 {
 	"exchange": {
-		"password": "your_exchange_api_key_password"
+		"password": "cne5EVN0ayk.kdh0abk"
 	},
 	"pairlists": [
 		{
 			"method": "VolumePairList",
-			"number_assets": 200,
+			"number_assets": 100,
 			"sort_key": "quoteVolume",
 			"refresh_period": 1800
 		},
@@ -28,7 +28,7 @@
 		},
 		{
 			"method": "VolumePairList",
-			"number_assets": 150,
+			"number_assets": 70,
 			"sort_key": "quoteVolume"
 		},
 		{
