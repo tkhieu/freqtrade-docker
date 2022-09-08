@@ -24,6 +24,7 @@
         "name": "$EXCHANGE",
         "key": "$EXCHANGE_KEY",
         "secret": "$EXCHANGE_SECRET",
+        "unknown_fee_rate": 0.0,
         "ccxt_config": {"enableRateLimit": true},
         "ccxt_async_config": {
             "enableRateLimit": true,
