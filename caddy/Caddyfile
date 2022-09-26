@@ -6,6 +6,14 @@
     # acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 }
 
-{$SITE_ADDRESS_1} {
+{$FREQTRADE_UI} {
+    reverse_proxy ft-ui:80
+}
+
+{$FREQTRADE_API_01} {
+    reverse_proxy ft-dryrun-01:9999
+}
+
+{$FREQTRADE_API_02} {
     reverse_proxy ft-dryrun-02:9999
 }

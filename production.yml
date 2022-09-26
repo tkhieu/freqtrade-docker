@@ -1,6 +1,14 @@
 ---
 version: '3'
 services:
+  ft-ui:
+    container_name: ft-ui
+    build: ./frequi
+    restart: unless-stopped
+    networks:
+      - pri_freq
+    ports:
+      - "3000:80"
   ft-dryrun-01:
     container_name: ft-dryrun-01
     build: .
@@ -26,19 +34,20 @@ services:
     networks:
       - pri_freq
     
-  # caddy:
-  #   image: caddy:2-alpine
-  #   restart: unless-stopped
-  #   ports:
-  #     - "80:80"
-  #     - "443:443"
-  #   volumes:
-  #     - ./caddy/Caddyfile:/etc/caddy/Caddyfile
-  #   networks:
-  #     - pub_web
-  #     - pri_freq
-  #   environment:
-  #     - SITE_ADDRESS_2=${SITE_ADDRESS_2}
+  caddy:
+    container_name: ft-caddy
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - pub_web
+      - pri_freq
+    env_file:
+      - ./caddy.env
 
 networks:
   pub_web:
