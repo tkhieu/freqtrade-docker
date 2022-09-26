@@ -6,6 +6,6 @@
     # acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 }
 
-{$SITE_ADDRESS} {
-    reverse_proxy live:9999
+{$SITE_ADDRESS_1} {
+    reverse_proxy ft-dryrun-02:9999
 }
