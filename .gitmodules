@@ -1,0 +1,3 @@
+[submodule "frequi"]
+	path = frequi
+	url = git@github.com:freqtrade/frequi.git
