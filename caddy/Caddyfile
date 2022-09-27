@@ -17,3 +17,7 @@
 {$FREQTRADE_API_02} {
     reverse_proxy ft-dryrun-02:9999
 }
+
+{$FREQTRADE_API_03} {
+    reverse_proxy ft-dryrun-03:9999
+}
