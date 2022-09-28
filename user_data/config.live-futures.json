@@ -161,16 +161,7 @@
             "1INCH/USDT"
         ]
     },
-    "pairlists": [
-        {
-            "method": "StaticPairList"
-        },
-        {
-            "method": "PriceFilter",
-            "min_price": 0.05,
-            "low_price_ratio": 0.01
-        }
-    ],
+    "pairlists": [],
     "edge": {
         "enabled": false,
         "process_throttle_secs": 3600,

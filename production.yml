@@ -43,7 +43,7 @@ services:
     volumes:
       - "./db:/freqtrade/user_data/db"
     command: >
-      freqtrade trade -c live-futures.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-ft-USDT.json
+      freqtrade trade -c live-futures.json -c user_data/blacklist-binance-ft.json -c user_data/pairlist-volume-binance-ft-USDT.json
     networks:
       - pri_freq
     

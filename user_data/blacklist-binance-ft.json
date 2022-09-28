@@ -1,0 +1,10 @@
+{
+    "exchange": {
+        "pair_blacklist": [
+            // Leverage
+            ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*",
+            // Others
+            "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|ANC|LUNA)/.*"
+        ]
+    }
+}
