@@ -21,24 +21,38 @@ services:
       freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-BUSD.json
     networks:
       - pri_freq
-  ft-dryrun-02:
-    container_name: ft-dryrun-02
-    build: .
-    env_file: 
-      - ./ft-dryrun-02.env
-    restart: unless-stopped
-    volumes:
-      - "./db:/freqtrade/user_data/db"
-    command: >
-      freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-BUSD.json
-    networks:
-      - pri_freq
+
+        #  ft-dryrun-02:
+        #    container_name: ft-dryrun-02
+        #    build: .
+        #    env_file: 
+        #      - ./ft-dryrun-02.env
+        #    restart: unless-stopped
+        #    volumes:
+        #      - "./db:/freqtrade/user_data/db"
+        #    command: >
+        #      freqtrade trade -c live.json -c user_data/blacklist-binance.json -c user_data/pairlist-volume-binance-BUSD.json
+        #   networks:
+        #      - pri_freq
   
-  ft-dryrun-03:
-    container_name: ft-dryrun-03
+        #  ft-dryrun-03:
+        #    container_name: ft-dryrun-03
+        #    build: .
+        #    env_file: 
+        #      - ./ft-dryrun-03.env
+        #    restart: unless-stopped
+        #    volumes:
+        #      - "./db:/freqtrade/user_data/db"
+        #    command: >
+        #      freqtrade trade -c live-futures.json -c user_data/blacklist-binance-ft.json -c user_data/pairlist-volume-binance-ft-USDT.json
+        #    networks:
+        #      - pri_freq
+
+  ft-dryrun-04:
+    container_name: ft-dryrun-04
     build: .
     env_file: 
-      - ./ft-dryrun-03.env
+      - ./ft-dryrun-04.env
     restart: unless-stopped
     volumes:
       - "./db:/freqtrade/user_data/db"
