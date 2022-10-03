@@ -199,7 +199,7 @@ class AlphaTrend(IStrategy):
         **kwargs,
     ) -> float:
 
-        return 2  # self.leverage_num.value
+        return 10  # self.leverage_num.value
 
     def custom_stoploss(
         self,

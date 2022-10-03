@@ -7,7 +7,7 @@
     "tradable_balance_ratio": 1,
     "dry_run_wallet": 2000,
     "fiat_display_currency": "USD",
-    "timeframe": "5m",
+    "timeframe": "15m",
     "trading_mode": "futures",
     "margin_mode": "isolated",
     "stoploss_on_exchange": true,
