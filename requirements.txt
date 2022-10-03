@@ -4,3 +4,4 @@ ipdb
 sklearn
 catboost
 pandas_ta
+tornado==6.1

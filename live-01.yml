@@ -1,0 +1,39 @@
+---
+version: '3'
+services:
+  ft-live-01:
+    container_name: ft-live-01
+    build: .
+    env_file: 
+      - ./ft-live-01.env
+    restart: unless-stopped
+    volumes:
+      - "./db:/freqtrade/user_data/db"
+    command: >
+      freqtrade trade -c live-futures.json -c user_data/blacklist-binance-ft.json -c user_data/pairlist-volume-binance-ft-USDT.json
+    networks:
+      - pri_freq
+    
+  caddy:
+    container_name: ft-caddy
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile-live01:/etc/caddy/Caddyfile
+      - ./caddy/data:/data # Optional
+      - ./caddy/config:/config # Optional
+    networks:
+      - pub_web
+      - pri_freq
+    env_file:
+      - ./caddy.env
+
+networks:
+  pub_web:
+    external: true
+  pri_freq:
+    external: false
+    driver: bridge
