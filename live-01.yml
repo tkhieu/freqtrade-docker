@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     volumes:
       - "./db:/freqtrade/user_data/db"
+      - "/etc/timezone:/etc/timezone:ro"
     command: >
       freqtrade trade -c live-futures.json -c user_data/blacklist-binance-ft.json -c user_data/pairlist-volume-binance-ft-USDT.json
     networks:
