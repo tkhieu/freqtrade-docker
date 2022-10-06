@@ -235,7 +235,6 @@ class AlphaTrend(IStrategy):
         else:
             if (1 - ((1 + sl_profit) / (1 + current_profit))) <= 0:
                 return 1
-
         return stoploss_from_open(sl_profit, current_profit, is_short=trade.is_short)
 
 
