@@ -19,7 +19,12 @@ class AlphaTrend(IStrategy):
     INTERFACE_VERSION = 3
 
     timeframe = "15m"
-    minimal_roi = {"0": 100.0}
+    minimal_roi = {
+        "1440": 0.18,
+        "720": 0.2,
+        "360": 0.25,
+        "0": 0.5
+    }
 
     stoploss = -0.99
     trailing_stop = False
@@ -235,7 +240,6 @@ class AlphaTrend(IStrategy):
         else:
             if (1 - ((1 + sl_profit) / (1 + current_profit))) <= 0:
                 return 1
-
         return stoploss_from_open(sl_profit, current_profit, is_short=trade.is_short)
 
 
